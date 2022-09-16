@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: rgb(168, 247, 168); font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(17, 139, 17); padding: 30px; }
+        h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p{font-size: 16px; text-align: center;}
+        form{width: 400px; max-width: 100%; padding: 20px; margin: 20px auto;}
+        input, label{display: block; margin: 10px; padding: 5px; width: 100%;}
+        input[type='submit']{width: auto;}
+    </style>
+</head>
+<body>
+    <%- include('partials/nav')%>
+    <h1>Admin Login Box</h1>
+    <!-- <p>Contact the complaint department on the web right here...</p> -->
+    <form id="contact-form" method="POST" action="/admin-login">
+        <label for="admin">Enter your name:</label>
+        <input type="text" name="admin" required >
+        <label for="admin_dept">Which department:</label>
+        <input type="text" name="admin_dept" required>
+        <label for="password">Enter Password</label>
+        <input type="password" name="password" required>
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>
